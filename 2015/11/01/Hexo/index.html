@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="hexo blog," />
 
 
 
@@ -57,16 +57,25 @@
 
 
 
-<meta name="description" content="Github 或 Git 相关命令操作删除远程分支1git push origin :gh-pages">
+<meta name="description" content="在 Github 中搭建 Hexo 博客安装参考官网
+部署步骤123hexo cleanhexo generatehexo deploy
+本地调试12hexo deploy -g  生成加部署hexo server -g  生成加预览 (hexo s -g)
+命令简写1234hexo n == hexo newhexo g == hexo generatehexo s == hexo server">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Github&Git">
-<meta property="og:url" content="http://yoursite.com/2015/11/01/Github-Git/index.html">
+<meta property="og:title" content="Hexo on Github">
+<meta property="og:url" content="http://yoursite.com/2015/11/01/Hexo/index.html">
 <meta property="og:site_name" content="X&&Y">
-<meta property="og:description" content="Github 或 Git 相关命令操作删除远程分支1git push origin :gh-pages">
-<meta property="og:updated_time" content="2015-10-31T18:45:30.000Z">
+<meta property="og:description" content="在 Github 中搭建 Hexo 博客安装参考官网
+部署步骤123hexo cleanhexo generatehexo deploy
+本地调试12hexo deploy -g  生成加部署hexo server -g  生成加预览 (hexo s -g)
+命令简写1234hexo n == hexo newhexo g == hexo generatehexo s == hexo server">
+<meta property="og:updated_time" content="2016-02-17T15:31:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Github&Git">
-<meta name="twitter:description" content="Github 或 Git 相关命令操作删除远程分支1git push origin :gh-pages">
+<meta name="twitter:title" content="Hexo on Github">
+<meta name="twitter:description" content="在 Github 中搭建 Hexo 博客安装参考官网
+部署步骤123hexo cleanhexo generatehexo deploy
+本地调试12hexo deploy -g  生成加部署hexo server -g  生成加预览 (hexo s -g)
+命令简写1234hexo n == hexo newhexo g == hexo generatehexo s == hexo server">
 
 
 
@@ -84,7 +93,7 @@
   };
 </script>
 
-  <title> Github&Git | X&&Y </title>
+  <title> Hexo on Github | X&&Y </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh">
@@ -204,7 +213,7 @@
             
             
               
-                Github&Git
+                Hexo on Github
               
             
           </h1>
@@ -216,7 +225,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">發表於</span>
-            <time itemprop="dateCreated" datetime="2015-11-01T02:44:04+08:00" content="2015-11-01">
+            <time itemprop="dateCreated" datetime="2015-11-01T01:36:33+08:00" content="2015-11-01">
               2015-11-01
             </time>
           </span>
@@ -242,28 +251,37 @@
       
 
       
-        <h1 id="Github-或-Git-相关命令操作"><a href="#Github-或-Git-相关命令操作" class="headerlink" title="Github 或 Git 相关命令操作"></a>Github 或 Git 相关命令操作</h1><h2 id="删除远程分支"><a href="#删除远程分支" class="headerlink" title="删除远程分支"></a>删除远程分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :gh-pages</span><br></pre></td></tr></table></figure>
+        <h1 id="在-Github-中搭建-Hexo-博客"><a href="#在-Github-中搭建-Hexo-博客" class="headerlink" title="在 Github 中搭建 Hexo 博客"></a>在 Github 中搭建 Hexo 博客</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>参考<a href="https://hexo.io/" target="_blank" rel="external">官网</a></p>
+<h2 id="部署步骤"><a href="#部署步骤" class="headerlink" title="部署步骤"></a>部署步骤</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="本地调试"><a href="#本地调试" class="headerlink" title="本地调试"></a>本地调试</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy -g  生成加部署</span><br><span class="line">hexo server -g  生成加预览 (hexo s -g)</span><br></pre></td></tr></table></figure>
+<h2 id="命令简写"><a href="#命令简写" class="headerlink" title="命令简写"></a>命令简写</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo n == hexo new</span><br><span class="line">hexo g == hexo generate</span><br><span class="line">hexo s == hexo server</span><br><span class="line">hexo d == hexo deploy</span><br></pre></td></tr></table></figure>
+<p>对 hexo server -p 8080 可以修改运行端口。</p>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><ul>
+<li><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">http://www.cnblogs.com/zhcncn/p/4097881.html</a></li>
+</ul>
 
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/hexo-blog/" rel="tag">#hexo blog</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/01/Hexo/" rel="next" title="Hexo on Github">
-                <i class="fa fa-chevron-left"></i> Hexo on Github
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/11/25/Meteor/" rel="prev" title="Meteor">
-                Meteor <i class="fa fa-chevron-right"></i>
+              <a href="/2015/11/01/Github-Git/" rel="prev" title="Github&Git">
+                Github&Git <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -375,7 +393,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Github-或-Git-相关命令操作"><span class="nav-number">1.</span> <span class="nav-text">Github 或 Git 相关命令操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#删除远程分支"><span class="nav-number">1.1.</span> <span class="nav-text">删除远程分支</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#在-Github-中搭建-Hexo-博客"><span class="nav-number">1.</span> <span class="nav-text">在 Github 中搭建 Hexo 博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署步骤"><span class="nav-number">1.2.</span> <span class="nav-text">部署步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本地调试"><span class="nav-number">1.2.1.</span> <span class="nav-text">本地调试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令简写"><span class="nav-number">1.3.</span> <span class="nav-text">命令简写</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引用"><span class="nav-number">2.</span> <span class="nav-text">引用</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
