@@ -57,15 +57,15 @@
 
 
 
-<meta name="description" content="我会写博客吗？">
+<meta name="description" content="博客还是要继续的，万一有用呢。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="X&&Y">
 <meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="X&&Y">
-<meta property="og:description" content="我会写博客吗？">
+<meta property="og:description" content="博客还是要继续的，万一有用呢。">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="X&&Y">
-<meta name="twitter:description" content="我会写博客吗？">
+<meta name="twitter:description" content="博客还是要继续的，万一有用呢。">
 
 
 
@@ -189,6 +189,11 @@
 
     
     
+      
+      
+
+      
+    
 
     
       
@@ -212,8 +217,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/11/25/JS/" itemprop="url">
-                  JS
+                <a class="post-title-link" href="/2016/02/20/Npm/" itemprop="url">
+                  Npm使用以及相关软件
                 </a>
               
             
@@ -226,8 +231,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-11-25T23:29:32+08:00" content="2015-11-25">
-              2015-11-25
+            <time itemprop="dateCreated" datetime="2016-02-20T01:00:33+08:00" content="2016-02-20">
+              2016-02-20
             </time>
           </span>
 
@@ -254,12 +259,126 @@
       
         
           
-            <h1 id="一些-JavaScript-项目"><a href="#一些-JavaScript-项目" class="headerlink" title="一些 JavaScript 项目"></a>一些 JavaScript 项目</h1><h2 id="togetherjs-mozilla"><a href="#togetherjs-mozilla" class="headerlink" title="togetherjs mozilla"></a><a href="https://togetherjs.com/" target="_blank" rel="external">togetherjs</a> mozilla</h2><p>用于共享屏幕，协同工作。可以发送消息与基于webRTC的对讲。</p>
+            <h1 id="Npm-使用"><a href="#Npm-使用" class="headerlink" title="Npm 使用"></a>Npm 使用</h1><h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><ul>
+<li><a href="https://github.com/Supervisor/supervisor" target="_blank" rel="external">supervisor</a> 监控代码修改，自动重启 node.js</li>
+<li>[pm2] 对应用进行发布，监控。</li>
+<li>[node-inspector] 调试</li>
+<li><a href="https://github.com/github/hubot" target="_blank" rel="external">hubot</a></li>
+</ul>
+<h1 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h1><ul>
+<li><a href="https://github.com/i5ting/node-deploy-practice" target="_blank" rel="external">发布node.js项目</a></li>
+<li><a href="http://www.oschina.net/question/2012764_2141029" target="_blank" rel="external">五款 Slack 开源替代品</a></li>
+</ul>
+<p>#<a href="https://www.npmjs.com/" target="_blank" rel="external">NPM</a><br>了解NPM大致功能。</p>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h3 id="NPM是什么？"><a href="#NPM是什么？" class="headerlink" title="NPM是什么？"></a>NPM是什么？</h3><p>NPM让JS代码容易分享和复用，对于你分享的代码非常容易保持更新。</p>
+<h3 id="安装Node-js和更新npm"><a href="#安装Node-js和更新npm" class="headerlink" title="安装Node.js和更新npm"></a>安装Node.js和更新npm</h3><p>Node.js的安装可以通过<a href="https://nodejs.org/en/" target="_blank" rel="external">官网</a>或<a href="https://github.com/nodesource/distributions" target="_blank" rel="external">Linux 分发</a>安装。<br>＊使用nvm＊<br>npm 要求 node 版本大于0.10.32</p>
+<h3 id="更新-npm"><a href="#更新-npm" class="headerlink" title="更新 npm"></a>更新 npm</h3><p>node的安装同时包含了npm， 如果需要最新版本的npm通过<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install npm -g</span><br></pre></td></tr></table></figure></p>
+<h3 id="手动安装-npm"><a href="#手动安装-npm" class="headerlink" title="手动安装 npm"></a>手动安装 npm</h3><h2 id="修复npm安装权限"><a href="#修复npm安装权限" class="headerlink" title="修复npm安装权限"></a>修复npm安装权限</h2><p>安装全局包过程出现<strong>EACCES</strong>说明你没有向npm安装全局包和命令的文件路径的写权限。通过两种方式可以修复这个问题：</p>
+<ol>
+<li>改变npm默认安装目录权限。</li>
+<li>改变npm默认安装目录到其它目录。</li>
+</ol>
+<p><a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions" target="_blank" rel="external">更多查看</a></p>
+<h2 id="npm安装局部包"><a href="#npm安装局部包" class="headerlink" title="npm安装局部包"></a>npm安装局部包</h2><p>npm 安装包有两种方式:局部，全局。<br>通过require的方式引入局部包，命令行工具使用全局包。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install &lt;package_name&gt;</span><br></pre></td></tr></table></figure></p>
+<p>以上命令会在当前目录创建一个<strong>node_modules</strong>目录(如果不存在)，然后下载包到这个目录。<br>通过ls 或　dir 命令查看是否成功下。</p>
+<p>若未指定版本将下载最新版本。否则通过版本规则下载。<br><a href="https://docs.npmjs.com/getting-started/installing-npm-packages-locally" target="_blank" rel="external">查看更多</a></p>
+<h2 id="使用-package-json"><a href="#使用-package-json" class="headerlink" title="使用 package.json"></a>使用 package.json</h2><p>通过创建package.json手动管理局部包。<br>package.json 必须包含的内容</p>
 <ul>
-<li>［github地址](<a href="https://github.com/mozilla/togetherjs" target="_blank" rel="external">https://github.com/mozilla/togetherjs</a>)</li>
+<li>‘name’</li>
+<li>‘version’</li>
 </ul>
-<h1 id="相关组织在Github上地址"><a href="#相关组织在Github上地址" class="headerlink" title="相关组织在Github上地址"></a>相关组织在Github上地址</h1><ul>
-<li><a href="https://github.com/mozilla" target="_blank" rel="external">mozila</a></li>
+<p>###创建package.json<br><a href="https://docs.npmjs.com/getting-started/using-a-package.json" target="_blank" rel="external">查看更多</a></p>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/20/Php/" itemprop="url">
+                  PHP
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-20T01:00:33+08:00" content="2016-02-20">
+              2016-02-20
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#PHP学习汇总</p>
+<p>##PHP学习资源</p>
+<ul>
+<li>we3school php语法<br>##PHP学习笔记</li>
+<li>函数，类， 关键字大小写不敏感。 变量大小写敏感。<br>#Php<br>##Php语法<br>##Php注意点</li>
+<li>php的引用就是在变量或者函数、对象等前面加上&amp;符号。在PHP 中引用的意思是：不同的名字访问同一个变量内容。</li>
+<li>php中引用采用的是”写时拷贝”的原理，就是除非发生写操作，指向同一个地址的变量或者对象是不会被拷贝的。</li>
+<li>Mcrypt扩展库可以实现加密解密功能</li>
 </ul>
 
           
@@ -302,8 +421,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/11/25/Meteor/" itemprop="url">
-                  Meteor
+                <a class="post-title-link" href="/2016/02/20/Python/" itemprop="url">
+                  Python
                 </a>
               
             
@@ -316,8 +435,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-11-25T23:08:33+08:00" content="2015-11-25">
-              2015-11-25
+            <time itemprop="dateCreated" datetime="2016-02-20T01:00:33+08:00" content="2016-02-20">
+              2016-02-20
             </time>
           </span>
 
@@ -344,12 +463,26 @@
       
         
           
-            <h1 id="Meteor-相关学习资料"><a href="#Meteor-相关学习资料" class="headerlink" title="Meteor 相关学习资料"></a>Meteor 相关学习资料</h1><ul>
-<li><a href="https://www.meteor.com/tutorials/blaze/creating-an-app" target="_blank" rel="external">https://www.meteor.com/tutorials/blaze/creating-an-app</a> 创建第一个 APP</li>
-<li>完成上面例子后的进一步 <a href="https://www.meteor.com/tutorials/blaze/next-steps" target="_blank" rel="external">https://www.meteor.com/tutorials/blaze/next-steps</a></li>
-<li><a href="https://www.meteor.com/case-studies/build-apps-with-meteor" target="_blank" rel="external">https://www.meteor.com/case-studies/build-apps-with-meteor</a></li>
+            <p>#Python</p>
+<p>##virtualenv</p>
+<ul>
+<li>安装</li>
 </ul>
-<h1 id="Meteor-命令"><a href="#Meteor-命令" class="headerlink" title="Meteor 命令"></a>Meteor 命令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">meteor update 更新meteor</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install python-virtualenv</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip install virtualenv</span><br></pre></td></tr></table></figure>
+<ul>
+<li>建立虚拟环境</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">virtualenv name</span><br></pre></td></tr></table></figure>
+<ul>
+<li>激活虚拟环境<br>进入创建的目录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /bin/activate</span><br></pre></td></tr></table></figure>
+<p>##python-dev</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install python-dev</span><br></pre></td></tr></table></figure>
+<p>##Python-模板<br>[Github]<a href="https://github.com/onlytiancai/pyempty" target="_blank" rel="external">https://github.com/onlytiancai/pyempty</a></p>
+<p>##Python-代码规划<br><a href="http://www.python.org/dev/peps/pep-0008/" target="_blank" rel="external">PEP8</a><br><a href="http://www.elias.cn/Python/PythonStyleGuide" target="_blank" rel="external">Google</a></p>
 
           
         
@@ -391,8 +524,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/11/01/Github-Git/" itemprop="url">
-                  Github&Git
+                <a class="post-title-link" href="/2016/02/20/Raspbeery/" itemprop="url">
+                  raspberry
                 </a>
               
             
@@ -405,8 +538,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-11-01T02:44:04+08:00" content="2015-11-01">
-              2015-11-01
+            <time itemprop="dateCreated" datetime="2016-02-20T01:00:33+08:00" content="2016-02-20">
+              2016-02-20
             </time>
           </span>
 
@@ -433,7 +566,18 @@
       
         
           
-            <h1 id="Github-或-Git-相关命令操作"><a href="#Github-或-Git-相关命令操作" class="headerlink" title="Github 或 Git 相关命令操作"></a>Github 或 Git 相关命令操作</h1><h2 id="删除远程分支"><a href="#删除远程分支" class="headerlink" title="删除远程分支"></a>删除远程分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :gh-pages</span><br></pre></td></tr></table></figure>
+            <h1 id="树莓派"><a href="#树莓派" class="headerlink" title="树莓派"></a>树莓派</h1><h1 id="关于SD要求"><a href="#关于SD要求" class="headerlink" title="关于SD要求"></a>关于SD要求</h1><p>树莓派的系统主要包含两类，官方和第三方。 镜像文件一般都需要4g及以上。</p>
+<ul>
+<li><a href="https://minibianpi.wordpress.com/" target="_blank" rel="external">minibianpi</a> 大约800M左右大小，在2g内存卡上成功。</li>
+</ul>
+<h1 id="关于写启动盘"><a href="#关于写启动盘" class="headerlink" title="关于写启动盘"></a>关于写启动盘</h1><p>通过 dd 命令写后出现 act 绿灯长亮，说明系统盘未活动，即启动失败。可能原因是 <strong>不要设置bs参数</strong>，另外也可能是读卡器或内存卡不兼容。 写入前需要格式化内存卡。</p>
+<h1 id="账户"><a href="#账户" class="headerlink" title="账户"></a>账户</h1><p> pi@raspberry</p>
+<ul>
+<li>账户 pi</li>
+<li>密码 raspberry</li>
+</ul>
+<p>开启root账户需要先设置密码，然后解锁root账户。<br> sudo passwd root<br> sudo paddwd –unlock root</p>
+<h1 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h1><p>编译新版本Node.js 对GCC有要求。</p>
 
           
         
@@ -475,8 +619,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/11/01/Hexo/" itemprop="url">
-                  Hexo on Github
+                <a class="post-title-link" href="/2015/12/02/Asterisk/" itemprop="url">
+                  Asterisk
                 </a>
               
             
@@ -489,8 +633,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-11-01T01:36:33+08:00" content="2015-11-01">
-              2015-11-01
+            <time itemprop="dateCreated" datetime="2015-12-02T09:53:51+08:00" content="2015-12-02">
+              2015-12-02
             </time>
           </span>
 
@@ -517,16 +661,557 @@
       
         
           
-            <h1 id="在-Github-中搭建-Hexo-博客"><a href="#在-Github-中搭建-Hexo-博客" class="headerlink" title="在 Github 中搭建 Hexo 博客"></a>在 Github 中搭建 Hexo 博客</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>参考<a href="https://hexo.io/" target="_blank" rel="external">官网</a></p>
-<h2 id="部署步骤"><a href="#部署步骤" class="headerlink" title="部署步骤"></a>部署步骤</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<h3 id="本地调试"><a href="#本地调试" class="headerlink" title="本地调试"></a>本地调试</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy -g  生成加部署</span><br><span class="line">hexo server -g  生成加预览 (hexo s -g)</span><br></pre></td></tr></table></figure>
-<h2 id="命令简写"><a href="#命令简写" class="headerlink" title="命令简写"></a>命令简写</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo n == hexo new</span><br><span class="line">hexo g == hexo generate</span><br><span class="line">hexo s == hexo server</span><br><span class="line">hexo d == hexo deploy</span><br></pre></td></tr></table></figure>
-<p>对 hexo server -p 8080 可以修改运行端口。</p>
-<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><ul>
-<li><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">http://www.cnblogs.com/zhcncn/p/4097881.html</a></li>
-<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">next主题设置</a></li>
+            <p>#AsteriskWiki书签表<br>下面会列出Asterisk相关的知识点链接。</p>
+<ul>
+<li><a href="https://wiki.asterisk.org/wiki/display/AST/Getting+a+Backtrace" target="_blank" rel="external">Getting+a+Backtrace</a> 收集Asterisk错误堆栈信息, 才对官方提交bug时需要详细的堆栈信息。</li>
+<li><a href="https://wiki.asterisk.org/wiki/display/AST/Secure+Calling+Tutorial" target="_blank" rel="external">Secure+Calling+Tutorial</a> 创建证书</li>
+<li><a href="https://wiki.asterisk.org/wiki/display/AST/WebRTC+tutorial+using+SIPML5" target="_blank" rel="external">WebRTC+tutorial+using+SIPML5</a> 利用SIPML%建立WebRTC通话</li>
+<li><a href="https://wiki.asterisk.org/wiki/display/AST/Asterisk+WebRTC+Support" target="_blank" rel="external">Asterisk+WebRTC+Support</a>Asterisk对WebRTC的支持情况和基本配置。</li>
+<li><p><a href="https://wiki.asterisk.org/wiki/display/AST/Interactive+Connectivity+Establishment+%28ICE%29+in+Asterisk" target="_blank" rel="external">Interactive Connectivity Establishment (ICE) in Asterisk</a> Asterisk 关于ICE的设置。</p>
+</li>
+<li><p><a href="https://wiki.asterisk.org/wiki/display/AST/Coding+Guidelines" target="_blank" rel="external">Coding+Guidelines</a>Asterisk源码编码规范</p>
+</li>
+<li><a href="https://wiki.asterisk.org/wiki/display/AST/Setting+up+PJSIP+Realtime" target="_blank" rel="external">This tutorial describes the configuration of Asterisk’s PJSIP channel driver with the “realtime” database storage backend</a> Asterisk 设置PJSIP</li>
+<li><a href="https://wiki.asterisk.org/wiki/display/AST/Asterisk+PJSIP+Troubleshooting+Guide" target="_blank" rel="external">Asterisk+PJSIP+Troubleshooting+Guide</a></li>
+<li><p><a href="https://wiki.asterisk.org/wiki/display/AST/Migrating+from+chan_sip+to+res_pjsip" target="_blank" rel="external">Migrating from chan_sip to res_pjsip Skip to end of metadata</a></p>
+</li>
+<li><p><a href="https://wiki.asterisk.org/wiki/display/AST/PJSIP+Transport+Selection" target="_blank" rel="external">PJSIP+Transport+Selection</a></p>
+</li>
+<li><p><a href="https://wiki.asterisk.org/wiki/display/AST/Configuring+res_pjsip" target="_blank" rel="external">Configuring+res_pjsip</a></p>
+</li>
+</ul>
+<p>##Asterisk相关协议</p>
+<ul>
+<li><a href="http://www.h3c.com.cn/Products___Technology/Technology/VoIP/Other_technology/Technology_recommend/200805/605897_30003_0.htm" target="_blank" rel="external">SIP技术介绍</a></li>
+<li><a href="http://www.h3c.com.cn/Products___Technology/Technology/VoIP/Other_technology/Technology_recommend/200805/605897_30003_0.htm" target="_blank" rel="external">H.323技术介绍</a></li>
+<li><a href="http://www.h3c.com.cn/MiniSite/Technology_Circle/Net_Reptile/The_Five/Home/Catalog/201206/747038_97665_0.htm" target="_blank" rel="external">STUN和TURN技术浅析</a></li>
 </ul>
 
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/02/Angular/" itemprop="url">
+                  Angular
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-12-02T09:53:51+08:00" content="2015-12-02">
+              2015-12-02
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Angular"><a href="#Angular" class="headerlink" title="Angular"></a>Angular</h1><p>Angular 包括 1.x , 2.x 两个版本。其中 1.x 为原生JS, 2.x 通过 TypeJs 转换产生.</p>
+<h2 id="1-x-与-2-x-对比"><a href="#1-x-与-2-x-对比" class="headerlink" title="1.x 与 2.x 对比"></a>1.x 与 2.x 对比</h2><ul>
+<li>源码语言发生改变</li>
+<li>绑定方式发生改变</li>
+</ul>
+<h1 id="1-x-文档"><a href="#1-x-文档" class="headerlink" title="1.x 文档"></a>1.x 文档</h1><p><a href="https://docs.angularjs.org/guide" target="_blank" rel="external">https://docs.angularjs.org/guide</a></p>
+<p>#Angularjs 1.x 学习</p>
+<p>#Angular学习链接</p>
+<p>##phone-cat<br>这是一个官方的客户端实现购物车的功能，可以了解到页面的布局，页面跳转等知识。</p>
+<ul>
+<li><a href="https://docs.angularjs.org/tutorial" target="_blank" rel="external">phone-cat</a>的官方例子。</li>
+<li><a href="http://www.ituring.com.cn/minibook/303" target="_blank" rel="external">phone-cat</a>中文翻译.<em>部分内容过时</em></li>
+<li>Jasmine行为驱动开发（BBD）框架</li>
+</ul>
+<p>#Angularjs 2.x 学习<br>angular2 与第一版本差别大，并且使用了非原生的js开发。需要等项目有一定成熟度后再使用。</p>
+<p>##相关链接</p>
+<ul>
+<li><a href="https://angular.io/" target="_blank" rel="external">angular 2.0 官网</a></li>
+<li><a href="https://angular.io/docs/js/latest/quickstart.html" target="_blank" rel="external">angular 2.0 5 分钟</a></li>
+<li><a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript 6入门</a></li>
+<li><a href="https://github.com/google/traceur-compiler" target="_blank" rel="external">ES6转ES5</a></li>
+<li><a href="http://google.github.io/traceur-compiler/demo/repl.html#" target="_blank" rel="external">traceur在线转换</a></li>
+<li><a href="https://babeljs.io/" target="_blank" rel="external">babeljs 另一种转换工具</a></li>
+</ul>
+<h1 id="Angularjs-代码风格"><a href="#Angularjs-代码风格" class="headerlink" title="Angularjs 代码风格"></a><a href="https://github.com/johnpapa/angular-styleguide" target="_blank" rel="external">Angularjs 代码风格</a></h1><ul>
+<li><a href="https://github.com/johnpapa/angular-styleguide/blob/master/i18n/zh-CN.md" target="_blank" rel="external">中文</a></li>
+</ul>
+<h2 id="相关Angular-项目"><a href="#相关Angular-项目" class="headerlink" title="相关Angular 项目"></a>相关Angular 项目</h2><p><a href="https://angular-ui.github.io/" target="_blank" rel="external">angular-ui</a> 对angular 的相关模块进行增强。<a href="https://github.com/angular-ui" target="_blank" rel="external">Github 地址</a><br><a href="https://github.com/angular-translate" target="_blank" rel="external">angular-translate</a> <a href="https://github.com/angular-translate" target="_blank" rel="external">Github地址</a></p>
+<p>##＃ <a href="https://angular-translate.github.io/" target="_blank" rel="external">angular-translate</a><br>Angularjs 的国际化模块。</p>
+<h3 id="ui-router"><a href="#ui-router" class="headerlink" title="ui-router"></a><a href="https://github.com/angular-ui/ui-router" target="_blank" rel="external">ui-router</a></h3><p>比自带ng-route耿具有灵活性的路由。</p>
+<h3 id="AngularJS-Atom"><a href="#AngularJS-Atom" class="headerlink" title="AngularJS-Atom"></a><a href="https://github.com/angular-ui/AngularJS-Atom" target="_blank" rel="external">AngularJS-Atom</a></h3><p>Atom 下的 angular 插件.</p>
+<h3 id="Angularjs-bootstrap"><a href="#Angularjs-bootstrap" class="headerlink" title="Angularjs bootstrap"></a><a href="https://angular-ui.github.io/bootstrap/" target="_blank" rel="external">Angularjs bootstrap</a></h3><p>将bootstrap的控件封装为指令, 快速开发时可以考虑，但后期修改会有限制。</p>
+<ul>
+<li>Accordion 类似风琴(侧边栏菜单)效果。</li>
+<li>Alert 从静态或动态数据产生警告。</li>
+<li>Buttons 对按钮进行分组，产生多选或单选框。</li>
+<li>Carousel 产生多张图片滚动效果。</li>
+<li>Collapse 对div的显示与消失产生动画效果。</li>
+<li>Datepicker 日期选择器。</li>
+<li>Dropdown 点击出现下拉菜单。</li>
+<li>Modal 服务，创建 Modal 窗口。</li>
+<li>Pagination 分页指令。</li>
+<li>Popover 在点击处弹出更过信息。</li>
+<li>Progressbar 进度条。</li>
+<li>Rating 显示可视的评价条。</li>
+<li>Tabs</li>
+<li>Timepicker 时间选择器</li>
+<li>Tooltip 对输入框显示 tip</li>
+<li>Typeahead 类似 ui-select</li>
+</ul>
+<h2 id="Angularjs-加载优化"><a href="#Angularjs-加载优化" class="headerlink" title="Angularjs 加载优化"></a>Angularjs 加载优化</h2><p>由于Angularjs主要做单页应用，相对普通页面需要加载更多的js。 优化需要从文件大小，是否加载方面考虑。</p>
+<ul>
+<li>使用懒加载</li>
+<li>使用 .min.js 和 .min.css</li>
+</ul>
+<h2 id="Jquery-与-Angularjs"><a href="#Jquery-与-Angularjs" class="headerlink" title="Jquery 与 Angularjs"></a>Jquery 与 Angularjs</h2><ul>
+<li><a href="http://stackoverflow.com/questions/14994391/thinking-in-angularjs-if-i-have-a-jquery-background" target="_blank" rel="external">http://stackoverflow.com/questions/14994391/thinking-in-angularjs-if-i-have-a-jquery-background</a></li>
+</ul>
+<h2 id="Angular规范"><a href="#Angular规范" class="headerlink" title="Angular规范"></a><a href="https://github.com/johnpapa/angular-styleguide/blob/master/i18n/zh-CN.md" target="_blank" rel="external">Angular规范</a></h2><ul>
+<li>依赖、controller和factory 分成多个文件. <strong>但对于 services 是否也需要呢? 限制 在services 中缓存了数据。必要吗？</strong></li>
+<li>IIFE语法 <strong>让代码不简洁，对测试有影响</strong></li>
+<li>模块命名需要统一规范，防止冲突。</li>
+<li>引入模块是不要引入不必有的变量，多用链式语法。</li>
+<li>区分模块的创建与获取。</li>
+<li>回调函数用命名代替匿名函数。易读，容易调试，减少潜逃。<strong>程序员最大的问题就是命名！！！</strong></li>
+<li>多使用 controllerAs <strong>没有直接使用那么方便。</strong></li>
+<li>置顶绑定成员 与回调函数使用命名函数规则类似。</li>
+<li>函数声明隐藏实现细节 同上</li>
+<li>一个view对应一个controller, services可以通用</li>
+<li>规划路由,<strong>Angular UI</strong></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/02/Django/" itemprop="url">
+                  Django
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-12-02T09:53:51+08:00" content="2015-12-02">
+              2015-12-02
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#Django</p>
+<p>###Get Djano<br>三种安装方式:</p>
+<ul>
+<li><a href="">Diango官网</a></li>
+<li>pip install Django==1.6.4</li>
+<li><a href="https://github.com/django/django.git" target="_blank" rel="external">Git</a></li>
+</ul>
+<p>###Create Project</p>
+<ul>
+<li>django-admin.py startproject mysite</li>
+</ul>
+<p>###Run Project</p>
+<ul>
+<li>python manage.py runserver</li>
+<li>Open <a href="http://127.0.0.1:8000/" target="_blank" rel="external">http://127.0.0.1:8000/</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/02/Book/" itemprop="url">
+                  阅读
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-12-02T09:53:51+08:00" content="2015-12-02">
+              2015-12-02
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="记录在线数据地址"><a href="#记录在线数据地址" class="headerlink" title="记录在线数据地址"></a>记录在线数据地址</h1><ul>
+<li><a href="tengine.taobao.org/book/index.html">Nginx开发从入门到精通</a> alibaba在Nginx上进行分支开放出Tengine.</li>
+<li>[开源软件架构]介绍了49个开源程序,包括上下两本。图灵有翻译中文版本。</li>
+<li><a href="producingoss.com/zh/index.html">制造开原软件</a>详细说明了开源的各方面注意事项</li>
+<li><a href="http://cpp1x.org/" target="_blank" rel="external">cpp1x.org</a> 包含c++11内容</li>
+<li><a href="http://www.ruanyifeng.com/blog/2011/09/restful.html" target="_blank" rel="external">理解RESTful架构</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/01/Lodash/" itemprop="url">
+                  Lodash
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-12-01T21:34:44+08:00" content="2015-12-01">
+              2015-12-01
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="lodash"><a href="#lodash" class="headerlink" title="lodash"></a>lodash</h1><h2 id="intersection"><a href="#intersection" class="headerlink" title="_.intersection"></a>_.intersection</h2><p>获取两个数组的交集</p>
+<h2 id="indexBy"><a href="#indexBy" class="headerlink" title="_.indexBy"></a>_.indexBy</h2><p>将对象数组转化️为以对象某一个值为键的对象</p>
+<h2 id="zipObject"><a href="#zipObject" class="headerlink" title="_.zipObject"></a>_.zipObject</h2><p>this method returns an object composed from arrays of property names and values.<br>可以将两个数组和为一个对象</p>
+<p>##_.flatten(array, [isDeep])<br>将多层数组转单层</p>
+<h2 id="values"><a href="#values" class="headerlink" title="_.values"></a>_.values</h2><p>只获取对象的值</p>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/12/01/Java/" itemprop="url">
+                  Jade
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-12-01T21:34:44+08:00" content="2015-12-01">
+              2015-12-01
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#Java</p>
+<p>##数组 List 相互转换</p>
+<ul>
+<li>List list = Arrays.asList(ArrayName);</li>
+<li>将list转换为数组<br>(String [])arrayList.toArray(new String[arrayList.size()]);</li>
+</ul>
+<p>##UI<br>基于Java的图形库最主要的有三种，它们分别是Swing、AWT和SWT。其中前两个是Sun随JDK一起发布的，而SWT则是由IBM领导的开源项目（现在已经脱离IBM了）Eclipse的一个子项目。<br>SWT的执行效率非常高。这是由于SWT的底层是由C编写的。由于SWT通过C直接调用系统层的GUI API。因此，使用SWT编写GUI程序，在外观上就和使用C++、Delphi（在Windows下）编写的程序完全一样。它的这一点和AWT类似。<br>AWT在底层也是使用C直接调用系统层的GUI API。但它们是有区别的，最大的区别可能就是一个是Sun提供的，一个是Eclipse自带的。这就意味着如果使用AWT，只要机器上安装了JDK或JRE，发布软件时无需带其它的库。而如何使用SWT，在发布时必须要自带上SWT的<em>.dll（Windows版）或</em>.so(Linux/Unix版)文件以及相关的*.jar包。还有就是它们所提供的图形接口有一些差异。SWT可能更丰富一些，我们可以看看Eclipse的界面就知道了。  但随着Sun对AWT库的不断更新，AWT的图形表现能力也在不断地提高。虽然SWT很强大，但它比较底层。也就是说它的一些功能在使用上还比较低级，不太符合面向对象的特征。因此，在SWT的基础上又开发了JFace。JFace在SWT上进行了一定的扩展。因此，也可说JFace是基于SWT的，就象在VC中使用MFC来包装Win32 API一样。<br>需要的相关包：</p>
+<pre><code>org.eclipse.swt_3.x.x.jar
+    org.eclipse.jface_3.x.x.jar
+    org.eclipse.core.runtime_3.x.x.jar
+    org.eclipse.ui.workbench_3.x.
+</code></pre>
           
         
       
@@ -551,7 +1236,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -585,14 +1270,14 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/default_avatar.jpg"
-               alt="XY" />
-          <p class="site-author-name" itemprop="name">XY</p>
-          <p class="site-description motion-element" itemprop="description">我会写博客吗？</p>
+               alt="tqcenglish" />
+          <p class="site-author-name" itemprop="name">tqcenglish</p>
+          <p class="site-description motion-element" itemprop="description">博客还是要继续的，万一有用呢。</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">32</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -602,7 +1287,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -644,7 +1329,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">XY</span>
+  <span class="author" itemprop="copyrightHolder">tqcenglish</span>
 </div>
 
 <div class="powered-by">
